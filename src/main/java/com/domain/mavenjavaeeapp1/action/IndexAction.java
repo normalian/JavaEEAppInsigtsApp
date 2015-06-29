@@ -15,8 +15,8 @@ public class IndexAction {
 	IndexViewDto indexViewDto;
 
 	@RequestName
-	public String do1(String argument) {
-		System.out.println("IndexAction#do1(" + argument + ") = "
+	public String do1(String arg) {
+		System.out.println("IndexAction#do1(" + arg + ") = "
 				+ indexViewDto.getName());
 		return "/index.xhtml";
 	}

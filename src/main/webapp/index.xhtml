@@ -21,10 +21,11 @@
 	<span>hello Facelets</span>
 	<h:form>
 		<div>
+			名前を入力して下さい
 			<h:inputText value="#{indexViewDto.name}" />
 		</div>
 		<h:commandButton value="button"
-			action="#{indexAction.do1('argument')}" />
+			action="#{indexAction.do1('some argument')}" />
 	</h:form>
 </h:body>
 </html>
