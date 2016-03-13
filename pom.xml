@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.domain</groupId>
 	<artifactId>JavaEEAppInsigtsApp</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
-			<version>6.0</version>
+			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -22,30 +22,24 @@
 		<dependency>
 			<groupId>com.microsoft.azure</groupId>
 			<artifactId>applicationinsights-web</artifactId>
-			<version>0.9.6</version>
+			<version>1.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.azure</groupId>
-			<artifactId>applicationinsights-logging-log4j2</artifactId>
-			<version>[0.9,)</version>
+			<artifactId>applicationinsights-logging-logback</artifactId>
+			<version>1.0.3</version>
 		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
-				<configuration>
-					<warSourceDirectory>WebContent</warSourceDirectory>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>

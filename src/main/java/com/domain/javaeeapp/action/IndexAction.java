@@ -1,6 +1,6 @@
-package com.domain.mavenjavaeeapp1.action;
+package com.domain.javaeeapp.action;
 
-import com.domain.mavenjavaeeapp1.dto.IndexViewDto;
+import com.domain.javaeeapp.dto.IndexViewDto;
 import com.microsoft.applicationinsights.web.javaee.RequestName;
 
 import javax.enterprise.context.RequestScoped;

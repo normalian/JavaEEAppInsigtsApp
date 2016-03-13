@@ -1,4 +1,4 @@
-package com.domain.mavenjavaeeapp1.dto;
+package com.domain.javaeeapp.dto;
 
 import java.io.Serializable;
 
