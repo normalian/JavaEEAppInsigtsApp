@@ -47,6 +47,14 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+						<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>WebContent\WEB-INF\web.xml</webXml>
+					<webappDirectory>WebContent</webappDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
