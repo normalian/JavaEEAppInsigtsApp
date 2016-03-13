@@ -18,6 +18,9 @@ import org.apache.http.util.EntityUtils;
 import com.microsoft.applicationinsights.TelemetryClient;
 import com.microsoft.applicationinsights.telemetry.Duration;
 
+// You should download agent jar at first from https://azuredownloads.blob.core.windows.net/applicationinsights/sdk.html
+// https://azure.microsoft.com/ja-jp/documentation/articles/app-insights-java-agent/
+
 @RequestScoped
 @Named
 public class HttpDependencyAction {
@@ -26,9 +29,6 @@ public class HttpDependencyAction {
 		Instant end;
 		TelemetryClient telemetry = new TelemetryClient();
 		try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-			// もしくは
-			// try (CloseableHttpClient httpClient =
-			// HttpClientBuilder.create().build()) {
 			HttpGet getMethod = new HttpGet("https://github.com/Microsoft/ApplicationInsights-Java");
 
 			try (CloseableHttpResponse response = httpClient.execute(getMethod)) {
@@ -49,7 +49,10 @@ public class HttpDependencyAction {
 
 		// Duration of Application Insights is milliseconds
 		// https://github.com/Microsoft/ApplicationInsights-Java/blob/master/core/src/main/java/com/microsoft/applicationinsights/telemetry/Duration.java
+		//
+		// Java standard duration is like below
+		// https://docs.oracle.com/javase/tutorial/datetime/iso/period.html
 
-		return "0";
+		return "/index.xhtml";
 	}
 }

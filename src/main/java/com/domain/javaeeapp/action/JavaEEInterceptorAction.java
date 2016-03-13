@@ -9,14 +9,14 @@ import javax.inject.Named;
 
 @RequestScoped
 @Named
-public class DataBindingAction {
+public class JavaEEInterceptorAction {
 
 	@Inject
 	ViewDto viewDto;
 
 	@RequestName
 	public String do1(String arg) {
-		System.out.println("DataBindingAction#do1(" + arg + ") = " + viewDto.getName());
+		System.out.println("JavaEEInterceptorAction#do1(" + arg + ") = " + viewDto.getName());
 		return "/index.xhtml";
 	}
 

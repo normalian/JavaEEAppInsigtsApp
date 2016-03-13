@@ -3,34 +3,28 @@
 	xmlns="http://schemas.microsoft.com/ApplicationInsights/2013/Settings"
 	schemaVersion="2014-05-30">
 	<!-- The key from the portal: -->
-	<instrumentationkey>b888a330-e807-4b84-a0b0-af776cd8dffe
+	<instrumentationkey>4d2654ca-dc03-413d-bc3b-b4bc42aa6470
 	</instrumentationkey>
 
-	<!-- HTTP request component (not required for bare API) -->
+  <!-- HTTP request component (not required for bare API) -->
+  <TelemetryModules>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.modules.WebRequestTrackingTelemetryModule"/>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.modules.WebSessionTrackingTelemetryModule"/>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.modules.WebUserTrackingTelemetryModule"/>
+  </TelemetryModules>
 
-	<TelemetryModules>
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.modules.WebRequestTrackingTelemetryModule" />
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.modules.WebSessionTrackingTelemetryModule" />
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.modules.WebUserTrackingTelemetryModule" />
-	</TelemetryModules>
-
-	<!-- Events correlation (not required for bare API) -->
-	<!-- These initializers add context data to each event -->
-
-	<TelemetryInitializers>
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.initializers.WebOperationIdTelemetryInitializer" />
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.initializers.WebOperationNameTelemetryInitializer" />
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.initializers.WebSessionTelemetryInitializer" />
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.initializers.WebUserTelemetryInitializer" />
-		<Add
-			type="com.microsoft.applicationinsights.web.extensibility.initializers.WebUserAgentTelemetryInitializer" />
-
-	</TelemetryInitializers>
+  <!-- Events correlation (not required for bare API) -->
+  <!-- These initializers add context data to each event -->
+  <TelemetryInitializers>
+    <Add   type="com.microsoft.applicationinsights.web.extensibility.initializers.WebOperationIdTelemetryInitializer"/>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebOperationNameTelemetryInitializer"/>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebSessionTelemetryInitializer"/>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebUserTelemetryInitializer"/>
+    <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebUserAgentTelemetryInitializer"/>
+  </TelemetryInitializers>
+  <!-- 
+  <SDKLogger>
+  	<Level>TRACE</Level>
+  </SDKLogger>
+  -->
 </ApplicationInsights>
