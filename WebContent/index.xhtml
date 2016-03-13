@@ -1,32 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
-<h:head>
-	<script type="text/javascript">
-	//<![CDATA[
-    var appInsights=window.appInsights||function(config){
-        function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
-    }({
-        instrumentationKey:"00e6725c-72a4-4711-b17a-a07e62747d5b"
-    });
-    
-    window.appInsights=appInsights;
-    appInsights.trackPageView();
-  //]]>
-</script>
-	<title>Facelet Title</title>
-</h:head>
-<h:body>
-	<span>hello Facelets</span>
-	<h:form>
-		<div>
-			名前を入力して下さい
-			<h:inputText value="#{indexViewDto.name}" />
-		</div>
-		<h:commandButton value="button"
-			action="#{indexAction.do1('some argument')}" />
-	</h:form>
-</h:body>
-</html>
+<body>
+	<ui:composition template="templates/_layout.xhtml">
+		<ui:define name="content">
 
+			<span>JavaEE7 Apps</span>
+			<div class="container">
+				名前を入力して下さい
+				<h:inputText value="#{indexViewDto.name}" />
+			</div>
+			<h:commandButton value="button"
+				action="#{indexAction.do1('some argument')}" />
+		</ui:define>
+	</ui:composition>
+
+</body>
+</html>
