@@ -7,20 +7,14 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <body>
 	<ui:composition template="templates/_layout.xhtml">
-		<ui:param name="pagetitle" value="AppInsights のテストアプリ" />
+		<ui:param name="pagetitle" value="AppInsights HTTP Dependency のテスト" />
 		<ui:define name="content">
-			<h1>JavaEE7 で Application Insights サンプル</h1>
+			<h1>AppInsights HTTP Dependency のテスト</h1>
 			<div class="container">
-				<ul>
-					<li><h:outputLink value="./faces/ee-databinding.xhtml">
-							<f:verbatim>JSF のデータバインディングを利用</f:verbatim>
-						</h:outputLink></li>
-					<li><h:outputLink
-							value="./faces/appinsights-httpdependency.xhtml">
-							<f:verbatim>AppInsights の Dependency を利用する</f:verbatim>
-						</h:outputLink></li>
-				</ul>
+				<h2 class="form-signin-heading">Web リクエストを送付する</h2>
 			</div>
+			<h:commandButton value="リクエスト送付" class="btn btn-default"
+				action="#{httpDependencyAction.doRequest()}" />
 		</ui:define>
 	</ui:composition>
 

@@ -7,7 +7,7 @@ import javax.inject.Named;
 
 @Named
 @ViewScoped
-public class IndexViewDto implements Serializable {
+public class ViewDto implements Serializable {
 	String name;
 
 	public String getName() {
