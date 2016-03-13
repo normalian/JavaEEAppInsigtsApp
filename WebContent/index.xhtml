@@ -8,12 +8,12 @@
 	<ui:composition template="templates/_layout.xhtml">
 		<ui:define name="content">
 
-			<span>JavaEE7 Apps</span>
+			<h1>JavaEE7 Apps</h1>
 			<div class="container">
-				名前を入力して下さい
-				<h:inputText value="#{indexViewDto.name}" />
+				<h2 class="form-signin-heading">名前を入力して下さい</h2>
+				<h:inputText value="#{indexViewDto.name}" class="form-control" />
 			</div>
-			<h:commandButton value="button"
+			<h:commandButton value="メッセージ送付" class="btn btn-default"
 				action="#{indexAction.do1('some argument')}" />
 		</ui:define>
 	</ui:composition>

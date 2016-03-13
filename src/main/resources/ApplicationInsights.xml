@@ -3,9 +3,8 @@
 	xmlns="http://schemas.microsoft.com/ApplicationInsights/2013/Settings"
 	schemaVersion="2014-05-30">
 	<!-- The key from the portal: -->
-
-	<InstrumentationKey>b888a330-e807-4b84-a0b0-af776cd8dffe
-	</InstrumentationKey>
+	<instrumentationkey>b888a330-e807-4b84-a0b0-af776cd8dffe
+	</instrumentationkey>
 
 	<!-- HTTP request component (not required for bare API) -->
 
